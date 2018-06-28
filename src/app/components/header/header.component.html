@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
+  <a class="navbar-brand" href="#">
+    <img width="30" height="30" style="margin-right: 4px" class="d-inline-block align-top" src="../../../assets/icons8-news-64.png"
+      alt="">NewsFeed</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <div class="input-group">
+        <input class="form-control" type="search" placeholder="Search" #search>
+        <div class="input-group-append">
+          <button (click)="onSearchClick(search.value)" class="btn btn-outline-success" type="submit">Search</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</nav>

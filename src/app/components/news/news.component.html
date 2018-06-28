@@ -1,0 +1,40 @@
+<app-header (searchTerm)='onSearchReceive($event)'></app-header>
+<div class="card">
+  <div class="card-header">
+    <ul class="nav nav-tabs card-header-tabs">
+      <li class="nav-item">
+        <a class="nav-link" [class.active]="category === 'India'" href="#" (click)="onCategoryClick('India')">India</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [class.active]="category === 'Business'" href="#" (click)="onCategoryClick('Business')">Business</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [class.active]="category === 'Entertainment'" href="#" (click)="onCategoryClick('Entertainment')">Entertainment</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [class.active]="category === 'Health'" href="#" (click)="onCategoryClick('Health')">Health</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [class.active]="category === 'Science'" href="#" (click)="onCategoryClick('Science')">Science</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [class.active]="category === 'Sports'" href="#" (click)="onCategoryClick('Sports')">Sports</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [class.active]="category === 'Technology'" href="#" (click)="onCategoryClick('Technology')">Technology</a>
+      </li>
+    </ul>
+  </div>
+  <div class="card-body">
+    <div class="card-columns">
+      <div class="card" *ngFor='let feed of news'>
+        <img *ngIf='feed.urlToImage' class="card-img-top" src="{{feed.urlToImage}}" alt="Card image cap">
+        <div class="card-body">
+          <a href="{{feed.url}}">
+            <h5 class="card-title">{{feed.title}}</h5>
+          </a>
+          <p class="card-text">{{feed.description}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
